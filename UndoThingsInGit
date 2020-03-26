@@ -49,6 +49,7 @@ my $STEP2 = <<"THERE2";
 **************************************************************************************
 **************************************************************************************
 ############################ UNDO THINGS IN GIT BEGIN ##############################################
+#####     This only work in the master branch
 
 #####    STEP 1.2: To undo specific files from current branch or workspace
 #####       --> git status
@@ -81,17 +82,10 @@ my $STEP3 = <<"THERE3";
 
 #####       --> git checkout commitID
 #####
-#####       --> git config --global core.editor "code --wait"
-
 #####       
-#####        To check both git entries:
-#####
-#####       --> git config --global user.name
-#####           andya
-#####       --> git config --global user.email
-#####           andrewawebdev\@gmail.com
-#####       --> git config core.editor
-#####           code --wait
+#####        This will bring all the files in a previously committed versions
+#####         Any changes done in these section is not saved. It is read only
+
 ############################ VIEW READ ONLY PREVIOUS COMMIT VERSIONS END ################################################
 **************************************************************************************
 **************************************************************************************
