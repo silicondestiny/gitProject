@@ -2,7 +2,7 @@
 no warnings;
 use Cwd;
 
-my $topHead =    "################## SOFTWARE DEV PROJECT CREATION QUICK STEPS WITH GIT VERSION CONTROL ####################\n";
+my $topHead =    "################## SOFTWARE DEV GIT UNDO THINGS ####################\n";
 my $bottomHead = "##############################################################################################################\n";
 
 my $STEP1 = <<"THERE1";
@@ -13,10 +13,22 @@ my $STEP1 = <<"THERE1";
 
 #####
 #####    STEP 1.1: In project directory where vscode is started,
-#####       Check if .git dir exists, if yes, remove .git directory
 #####
-#####       --> git init
-#####       
+#####       --> git show HEAD
+#####       In vim mode:
+commit 3b447f716f8c46bb41948935e7e72c023e45bfa0 (HEAD -> master)
+Author: andya <andrewawebdev\@gmail.com>
+Date:   Thu Mar 26 10:48:13 2020 -0700
+
+    Test commits on vscode comment editing
+
+diff --git a/Step0-Create-new-project-w-git b/Step0-Create-new-project-w-git
+new file mode 100755
+index 0000000..fad5793
+--- /dev/null
++++ b/Step0-Create-new-project-w-git
+@@ -0,0 +1,321 @@
+
 #####       Initialized empty Git repository in ?/ProjectDir/.git/
 ####
 ############################ STEP END ################################################
@@ -70,11 +82,13 @@ my $STEP3 = <<"THERE3";
 **************************************************************************************
 ############################ STEP BEGIN ##############################################
 
-#####    STEP 1.3: Set git user.name and user.email
+#####    STEP 1.3: Set git user.name, user.email and core.editor
 #####       
 #####       --> git config --global user.name andya
 
 #####       --> git config --global user.email andrewawebdev\@gmail.com
+#####
+#####       --> git config --global core.editor "code --wait"
 
 #####       
 #####        To check both git entries:
@@ -83,7 +97,8 @@ my $STEP3 = <<"THERE3";
 #####           andya
 #####       --> git config --global user.email
 #####           andrewawebdev\@gmail.com
-
+#####       --> git config core.editor
+#####           code --wait
 ############################ STEP END ################################################
 **************************************************************************************
 **************************************************************************************
@@ -177,7 +192,13 @@ my $STEP5 = <<"THERE5";
 **************************************************************************************
 ############################ STEP BEGIN ##############################################
 
-#####    STEP 1.5: First commit new project to repository
+#####    STEP 1.5.1: First commit new project to repository
+#####       --> git commit -m
+#####     
+#####       vscode opens commit messages and close the file
+#####
+#####    STEP 1.5.2: If 1.5.1 was not followed:
+#####       First commit new project to repository
 #####       --> git commit -m "Initial commit"
 #####      
 On branch master

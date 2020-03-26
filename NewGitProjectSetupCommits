@@ -2,37 +2,24 @@
 no warnings;
 use Cwd;
 
-my $topHead =    "################## git commands summary ####################\n";
+my $topHead =    "################## SOFTWARE DEV PROJECT CREATION QUICK STEPS WITH GIT VERSION CONTROL ####################\n";
 my $bottomHead = "##############################################################################################################\n";
 
 my $STEP1 = <<"THERE1";
 
 **************************************************************************************
 **************************************************************************************
-############################ STARTUP COMMANDS BEGIN ##############################################
+############################ STEP BEGIN ##############################################
 
 #####
-#####    COMMAND# 1.1.
+#####    STEP 1.1: In project directory where vscode is started,
+#####       Check if .git dir exists, if yes, remove .git directory
+#####
 #####       --> git init
-#####
-#####       Check if .git dir exists, if yes, remove .git director
-#####       Initialized empty Git repository in ?/ProjectDir/.git/
-#####  
-#####    COMMAND# 1.2.
-#####       --> git status
-#####
-#####    Check to see git project status
-#####          
-#####    COMMANDS# 1.3.
-#####       --> git config --global user.name andya
-#####       --> git config --global user.email andrewawebdev\@gmail.com
-#####
-#####       --> git config --global user.name
-#####       --> git config --global user.email
-#####
-#####     Set and get important git global settings    
 #####       
-############################ STARTUP COMMANDS END ################################################
+#####       Initialized empty Git repository in ?/ProjectDir/.git/
+####
+############################ STEP END ################################################
 **************************************************************************************
 **************************************************************************************
 
@@ -41,21 +28,38 @@ my $STEP2 = <<"THERE2";
 
 **************************************************************************************
 **************************************************************************************
-############################ GENERAL COMMANDS BEGIN ##############################################
+############################ STEP BEGIN ##############################################
 
-#####    STEP 2.1:
-#####       --> git add FILENAME
-#####       --> git add .
+#####    STEP 1.2: Check to see git project status
+#####       --> git status
 #####       
-#####    This command stages FILENAME or all files for later commit actions
+#####
 
-#####    STEP 2.2:
-#####       --> git rm --cached <file>... 
-#####       --> git rm --cached .
-#####       
-#####    This command unstage FILENAME or all files for later commit actions
+On branch master
 
-############################ GENERAL COMMANDS END ################################################
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.editorconfig
+	.gitignore
+	README.md
+	angular.json
+	browserslist
+	e2e/
+	junk.ts
+	karma.conf.js
+	package-lock.json
+	package.json
+	src/
+	tsconfig.app.json
+	tsconfig.json
+	tsconfig.spec.json
+	tslint.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+############################ STEP END ################################################
 **************************************************************************************
 **************************************************************************************
 
@@ -64,34 +68,26 @@ my $STEP3 = <<"THERE3";
 
 **************************************************************************************
 **************************************************************************************
-############################ GENERAL COMMANDS BEGIN ##############################################
+############################ STEP BEGIN ##############################################
 
-#####    STEP 3.1:
-#####       --> git commit -m="Commit messages"
+#####    STEP 1.3: Set git user.name, user.email and core.editor
 #####       
-#####    This command commits staged files into repository
+#####       --> git config --global user.name andya
 
-#####    STEP 3.2:
-#####       Edit ~/.gitconfig to include
-[core]
-	editor = code --wait
+#####       --> git config --global user.email andrewawebdev\@gmail.com
 #####
-#####       Or on the terminal
 #####       --> git config --global core.editor "code --wait"
+
 #####       
-#####    This command opens vscode to allow message inputs to the commit process
-#####     Input all your commit messages and CLOSE the file in vscode to proceed
-
-#####    STEP 3.3:
-#####       --> git status 
-#####     To view project git status
-
-#####    STEP 3.4:
-#####       --> git log 
-#####       --> git log --oneline
-#####     To view project commit history
-
-############################ GENERAL COMMANDS END ################################################
+#####        To check both git entries:
+#####
+#####       --> git config --global user.name
+#####           andya
+#####       --> git config --global user.email
+#####           andrewawebdev\@gmail.com
+#####       --> git config core.editor
+#####           code --wait
+############################ STEP END ################################################
 **************************************************************************************
 **************************************************************************************
 
@@ -184,7 +180,13 @@ my $STEP5 = <<"THERE5";
 **************************************************************************************
 ############################ STEP BEGIN ##############################################
 
-#####    STEP 1.5: First commit new project to repository
+#####    STEP 1.5.1: First commit new project to repository
+#####       --> git commit -m
+#####     
+#####       vscode opens commit messages and close the file
+#####
+#####    STEP 1.5.2: If 1.5.1 was not followed:
+#####       First commit new project to repository
 #####       --> git commit -m "Initial commit"
 #####      
 On branch master
