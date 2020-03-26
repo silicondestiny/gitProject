@@ -97,76 +97,23 @@ my $STEP4 = <<"THERE4";
 **************************************************************************************
 ############################ STEP BEGIN ##############################################
 
-#####    STEP 1.4.1: Check .gitignore file exists, if not create a new one
-#####               that includes all directories and file names that should not
-#####               be included in the repository
+#####    STEP 1.4.1: To revert files from master version
 #####
-#####         1.4.2: Stage all files for commit operations by :
-#####       --> git add .
+#####       --> git revert commitID
 #####
-#####         1.4.3 Check staging by:
-#####       --> git status
-#####
-On branch master
+#####        CommitEditFile is opened for edit, close the file to continue
+#####       
+#####     This will unstage modified files from previouse versions
+#####         for further project work.  Please avoid using this command
 
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-        new file:   .editorconfig
-        new file:   .gitignore
-        new file:   README.md
-        new file:   angular.json
-        new file:   browserslist
-        new file:   e2e/protractor.conf.js
-        new file:   e2e/src/app.e2e-spec.ts
-        new file:   e2e/src/app.po.ts
-        new file:   e2e/tsconfig.json
-        new file:   junk.ts
-        new file:   karma.conf.js
-        new file:   package-lock.json
-        new file:   package.json
-        new file:   src/app/app-routing.module.ts
-        new file:   src/app/app.component.css
-        new file:   src/app/app.component.html
-        new file:   src/app/app.component.spec.ts
-        new file:   src/app/app.component.ts
-        new file:   src/app/app.module.ts
-        new file:   src/app/auth/login/login.component.css
-        new file:   src/app/auth/login/login.component.html
-        new file:   src/app/auth/login/login.component.ts
-        new file:   src/app/auth/signup/signup.component.css
-        new file:   src/app/auth/signup/signup.component.html
-        new file:   src/app/auth/signup/signup.component.ts
-        new file:   src/app/material.module.ts
-        new file:   src/app/training/current-training/current-training.component.css
-        new file:   src/app/training/current-training/current-training.component.html
-        new file:   src/app/training/current-training/current-training.component.ts
-        new file:   src/app/training/new-training/new-training.component.css
-        new file:   src/app/training/new-training/new-training.component.html
-        new file:   src/app/training/new-training/new-training.component.ts
-        new file:   src/app/training/past-trainings/past-trainings.component.css
-        new file:   src/app/training/past-trainings/past-trainings.component.html
-        new file:   src/app/training/past-trainings/past-trainings.component.ts
-        new file:   src/app/training/training.component.css
-        new file:   src/app/training/training.component.html
-        new file:   src/app/training/training.component.ts
-        new file:   src/app/welcome/welcome.component.css
-        new file:   src/app/welcome/welcome.component.html
-        new file:   src/app/welcome/welcome.component.ts
-        new file:   src/assets/.gitkeep
-        new file:   src/environments/environment.prod.ts
-        new file:   src/environments/environment.ts
-        new file:   src/favicon.ico
-        new file:   src/index.html
-        new file:   src/main.ts
-        new file:   src/polyfills.ts
-        new file:   src/styles.css
-        new file:   src/test.ts
-        new file:   tsconfig.app.json
-        new file:   tsconfig.json
-        new file:   tsconfig.spec.json
-        new file:   tslint.json
+#####    STEP 1.4.1: To delete previous commit versions
+#####
+#####       --> git reset --mixed
+#####       --> git reset --soft
+#####       --> git reset --hard
+#####
+#####       This will delete or move the master version to the committed version specified
+#####         Avoid using this command before understanding all implications
 
 ############################ STEP END ################################################
 **************************************************************************************
